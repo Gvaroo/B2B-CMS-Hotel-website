@@ -3,8 +3,38 @@
 html,
 body {
   height: 100%;
+  background-color: rgb(244 244 244);
 }
+:host {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  line-height: 1.231;
 }
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-dialog .mat-dialog-container {
+  width: 300px;
+  margin-bottom: 18rem;
+}
+
+/* @media (max-width: 1200px) {
+  .header-dialog .mat-dialog-container {
+  
+  }
+} */

@@ -1,0 +1,27 @@
+.authorization-wrapper {
+  width: auto;
+  border-radius: 4px;
+  /* padding: 8px 16px 0 16px; */
+}
+.divider {
+  margin-left: 6px;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(134 134 134);
+}
+.login-span {
+  font-size: 16px;
+  font-weight: 400;
+}
+.register-button {
+  padding: 0px !important;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(15 93 228);
+}
+.mat-form-field {
+  width: 100%;
+}
+.login-button {
+  width: 100%;
+}

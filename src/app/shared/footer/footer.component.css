@@ -1,0 +1,33 @@
+.container-fluid {
+  border-top: 1px solid rgb(229 229 229);
+  border-bottom: 1px solid rgb(229 229 229);
+  width: auto;
+}
+.footer-about {
+  display: flex;
+  color: rgb(15 93 228);
+  font-size: 16px;
+  font-weight: 400;
+  align-items: center;
+}
+.footer-about ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0px;
+}
+.footer-about ul li {
+  margin-left: 1rem;
+}
+.footer-about img {
+  margin-bottom: 25px;
+}
+.footer-social {
+  margin-top: 1.1rem;
+  justify-content: flex-end;
+}
+.footer-social a {
+  margin-right: 15px;
+}
+.footer-social a span {
+  font-size: 30px;
+}
