@@ -25,6 +25,7 @@
         <mat-label>Password</mat-label>
         <input matInput #pwd placeholder="••••••" type="password" required />
       </mat-form-field>
+      <p (click)="openDialog()" class="password_text">Forgot your password?</p>
       <button
         (click)="onLoginBtnClick(mall.value, pwd.value)"
         class="login-button"

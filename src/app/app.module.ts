@@ -16,6 +16,8 @@ import { HotToastModule } from '@ngneat/hot-toast';
 import { RegistrationPgComponent } from './view/registration-pg/registration-pg.component';
 import { HomePgComponent } from './view/home-pg/home-pg.component';
 import { AuthService } from './shared/services/auth.service';
+import { ForgotPwdFormComponent } from './view-helpers/forgot-pwd-form/forgot-pwd-form.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +26,7 @@ import { AuthService } from './shared/services/auth.service';
     FooterComponent,
     RegistrationPgComponent,
     HomePgComponent,
+    ForgotPwdFormComponent,
   ],
   imports: [
     BrowserModule,

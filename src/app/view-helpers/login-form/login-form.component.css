@@ -25,3 +25,10 @@
 .login-button {
   width: 100%;
 }
+.password_text {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(15 93 228);
+  text-align: center;
+  cursor: pointer;
+}

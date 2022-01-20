@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
   ) {}
 
   openDialog() {
-    this.dialog.open(LoginFormComponent, {
+    const dialogRef = this.dialog.open(LoginFormComponent, {
       panelClass: 'header-dialog',
       position: { right: '0' },
     });

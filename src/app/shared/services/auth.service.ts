@@ -8,6 +8,7 @@ import {
 import { Router } from '@angular/router';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { HotToastService } from '@ngneat/hot-toast';
+import { MatDialog } from '@angular/material/dialog';
 
 @Injectable({
   providedIn: 'root',
@@ -17,12 +18,13 @@ export class AuthService {
   info: any;
 
   constructor(
-    public afs: AngularFirestore,
-    public db: AngularFireDatabase,
-    public afAuth: AngularFireAuth,
-    public ngZone: NgZone,
-    public router: Router,
-    public toast: HotToastService
+    private afs: AngularFirestore,
+    private db: AngularFireDatabase,
+    private afAuth: AngularFireAuth,
+    private ngZone: NgZone,
+    private router: Router,
+    private dialog: MatDialog,
+    private toast: HotToastService
   ) {
     this.afAuth.authState.subscribe((user) => {
       if (user) {
@@ -91,7 +93,8 @@ export class AuthService {
       .sendPasswordResetEmail(passwordResetEmail)
       .then(() => {
         this.toast.success('Password reset email was sent, check your email');
-        this.router.navigate(['log-in']);
+        this.dialog.closeAll();
+        this.router.navigate(['/']);
       })
       .catch((error) => {
         this.toast.error(error.message);

@@ -1,0 +1,26 @@
+.authorization-wrapper {
+  width: auto;
+  border-radius: 4px;
+  /* padding: 8px 16px 0 16px; */
+}
+.title {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.back-arrow {
+  margin-bottom: 12px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.authorization-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+}
+.mat-form-field {
+  width: 100%;
+}
+.mat-raised-button {
+  width: 100%;
+}
