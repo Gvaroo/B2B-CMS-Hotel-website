@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/shared/services/auth.service';
 
 @Component({
   selector: 'app-login-form',
@@ -17,7 +20,19 @@ export class LoginFormComponent implements OnInit {
     return this.email.hasError('email') ? 'Not a valid email' : '';
   }
 
-  constructor() {}
+  constructor(
+    public dialog: MatDialog,
+    private router: Router,
+    private auth: AuthService
+  ) {}
 
   ngOnInit(): void {}
+  onRegisterBtnClick() {
+    this.router.navigate(['/register']);
+    this.dialog.closeAll();
+  }
+  onLoginBtnClick(email: any, password: any) {
+    this.auth.signIn(email, password);
+    this.dialog.closeAll();
+  }
 }

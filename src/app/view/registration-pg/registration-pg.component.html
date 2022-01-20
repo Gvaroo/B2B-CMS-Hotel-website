@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="box">
+    <h1 class="register-text">Registration</h1>
+    <form (ngSubmit)="onFormSubmit(form)" #form="ngForm">
+      <mat-form-field appearance="outline">
+        <input
+          name="displayName"
+          ngModel
+          matInput
+          placeholder="Name"
+          type="text"
+          required
+        />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <input
+          name="email"
+          ngModel
+          matInput
+          placeholder="Email"
+          type="email"
+          required
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <input
+          matInput
+          name="password"
+          ngModel
+          placeholder="Password"
+          type="password"
+          required
+        />
+      </mat-form-field>
+      <button
+        [disabled]="form.invalid"
+        class="register-button"
+        mat-raised-button
+        type="submit"
+        color="primary"
+      >
+        Register
+      </button>
+    </form>
+  </div>
+</div>

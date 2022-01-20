@@ -1,0 +1,23 @@
+.container {
+  padding-top: 20px;
+}
+.box {
+  border-radius: 10px;
+  width: 469px;
+  padding: 60px;
+  box-shadow: 0 10px 30px rgb(55 58 64 / 11%);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.mat-form-field {
+  width: 100%;
+}
+.register-text {
+  text-align: center !important;
+  font-weight: 500;
+  margin-top: 20px;
+}
+.register-button {
+  width: 100%;
+}

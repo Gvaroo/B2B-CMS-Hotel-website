@@ -2,11 +2,28 @@
   <mat-toolbar color="primary">
     <img class="logo" src="assets/logo.png" alt="" />
     <span>TravelMore</span>
+    <button routerLink="/" mat-button>Home</button>
+    <button routerLink="/" mat-button>Privacy Policy</button>
+    <button *ngIf="auth.userData as user" mat-button>Add hotel</button>
     <span class="example-spacer"></span>
-    <div class="login-module">
-      <button (click)="openDialog()" class="menu-button" mat-button>
-        Log in
-      </button>
-    </div>
+    <ng-container *ngIf="auth.userData as user; else loginForm">
+      <div class="login-module">
+        <a href="/">
+          <button (click)="logOut()" class="menu-button" mat-button>
+            <mat-icon>logout</mat-icon>
+            Logout
+          </button></a
+        >
+      </div>
+    </ng-container>
   </mat-toolbar>
 </header>
+
+<ng-template #loginForm>
+  <div class="login-module">
+    <button (click)="openDialog()" class="menu-button" mat-button>
+      <mat-icon>login</mat-icon>
+      Log in
+    </button>
+  </div>
+</ng-template>

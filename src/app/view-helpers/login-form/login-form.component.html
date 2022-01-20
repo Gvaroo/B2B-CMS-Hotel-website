@@ -1,7 +1,13 @@
 <div class="authorization-wrapper">
   <span class="login-span">Log in</span>
   <span class="divider">or</span>
-  <button class="register-button" mat-flat-button>Sign up</button>
+  <button
+    (click)="onRegisterBtnClick()"
+    class="register-button"
+    mat-flat-button
+  >
+    Sign up
+  </button>
   <div class="authorization-content">
     <div class="form">
       <mat-form-field appearance="outline">
@@ -10,15 +16,21 @@
           matInput
           placeholder="example@gmail.com"
           [formControl]="email"
+          #mall
           required
         />
         <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
       </mat-form-field>
       <mat-form-field appearance="outline">
         <mat-label>Password</mat-label>
-        <input matInput placeholder="••••••" type="password" required />
+        <input matInput #pwd placeholder="••••••" type="password" required />
       </mat-form-field>
-      <button class="login-button" mat-raised-button color="primary">
+      <button
+        (click)="onLoginBtnClick(mall.value, pwd.value)"
+        class="login-button"
+        mat-raised-button
+        color="primary"
+      >
         Log in
       </button>
     </div>
