@@ -1,0 +1,46 @@
+.banner-wrapper {
+  height: 560px;
+}
+.banner {
+  background-image: url("https://of.worldota.net/travel/marketing_campaigns/202112_abudhabi_promo.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  height: 100%;
+}
+.banner-text {
+  font-size: 42px;
+  font-weight: 400;
+  text-align: center;
+  color: #fff;
+  padding-top: 3rem;
+  font-family: "Luxurious Roman", cursive;
+}
+.hotel-partners {
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 38px;
+}
+.hotel-partners .partner-item:first-child {
+  margin-left: 0;
+}
+.hotel-partners .partner-item {
+  margin-left: 10px;
+  width: 15%;
+  height: auto;
+}
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.other-partners {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.other-partners .other-partners-item {
+  width: 7%;
+  height: auto;
+}

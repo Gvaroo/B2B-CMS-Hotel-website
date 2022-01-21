@@ -17,6 +17,7 @@ import { RegistrationPgComponent } from './view/registration-pg/registration-pg.
 import { HomePgComponent } from './view/home-pg/home-pg.component';
 import { AuthService } from './shared/services/auth.service';
 import { ForgotPwdFormComponent } from './view-helpers/forgot-pwd-form/forgot-pwd-form.component';
+import { BannerComponent } from './shared/header/banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ForgotPwdFormComponent } from './view-helpers/forgot-pwd-form/forgot-pw
     RegistrationPgComponent,
     HomePgComponent,
     ForgotPwdFormComponent,
+    BannerComponent,
   ],
   imports: [
     BrowserModule,
