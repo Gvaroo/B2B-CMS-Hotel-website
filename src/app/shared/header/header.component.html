@@ -4,7 +4,9 @@
     <span>TravelMore</span>
     <button routerLink="/" mat-button>Home</button>
     <button routerLink="/" mat-button>Privacy Policy</button>
-    <button *ngIf="auth.userData as user" mat-button>Add hotel</button>
+    <button *ngIf="auth.userData as user" routerLink="/add-hotel" mat-button>
+      Add hotel
+    </button>
     <span class="example-spacer"></span>
     <ng-container *ngIf="auth.userData as user; else loginForm">
       <div class="login-module">
@@ -18,7 +20,6 @@
     </ng-container>
   </mat-toolbar>
 </header>
-<app-banner></app-banner>
 
 <ng-template #loginForm>
   <div class="login-module">

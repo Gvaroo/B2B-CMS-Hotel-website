@@ -18,9 +18,8 @@ export class AuthService {
   info: any;
 
   constructor(
-    private afs: AngularFirestore,
-    private db: AngularFireDatabase,
-    private afAuth: AngularFireAuth,
+    public afs: AngularFirestore,
+    public afAuth: AngularFireAuth,
     private ngZone: NgZone,
     private router: Router,
     private dialog: MatDialog,

@@ -1,0 +1,83 @@
+<div class="container">
+  <div class="box">
+    <h1 class="hotel-text">Add hotel</h1>
+    <form (ngSubmit)="onFormSubmit(form)" #form="ngForm">
+      <h3>Hotel name</h3>
+      <mat-form-field appearance="outline">
+        <input
+          name="name"
+          ngModel
+          matInput
+          placeholder="Enter here"
+          type="text"
+          required
+        />
+      </mat-form-field>
+      <h3>Hotel city</h3>
+      <mat-form-field appearance="outline">
+        <input
+          name="city"
+          ngModel
+          matInput
+          placeholder="Enter here"
+          type="text"
+          required
+        />
+      </mat-form-field>
+      <h3>Hotel address</h3>
+      <mat-form-field appearance="outline">
+        <input
+          name="address"
+          ngModel
+          matInput
+          placeholder="Enter here"
+          type="text"
+          required
+        />
+      </mat-form-field>
+      <h3>Hotel star</h3>
+      <mat-form-field appearance="outline">
+        <select name="star" ngModel matNativeControl required>
+          <option value="5">5 Stars</option>
+          <option value="4">4 Stars</option>
+          <option value="3">3 Stars</option>
+          <option value="2">2 stars</option>
+          <option value="1">1 stars</option>
+        </select>
+      </mat-form-field>
+      <h3>The main amenities of the hotel</h3>
+      <mat-form-field appearance="outline">
+        <mat-label>Enter here</mat-label>
+        <textarea name="amenities" ngModel required matInput></textarea>
+      </mat-form-field>
+
+      <h3>Hotel main image</h3>
+      <div class="upload-image">
+        <input
+          style="display: none"
+          (change)="onImgInpChange($event)"
+          type="file"
+          #selectFile
+          accept=".jpg,.png,.jpeg"
+        />
+        <button
+          class="upload-btn"
+          mat-raised-button
+          color="warn"
+          (click)="selectFile.click()"
+        >
+          Select Image
+        </button>
+      </div>
+      <button
+        class="register-button"
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="form.invalid"
+      >
+        Register hotel
+      </button>
+    </form>
+  </div>
+</div>
