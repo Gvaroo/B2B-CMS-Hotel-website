@@ -19,13 +19,14 @@ export class AddHotelPgComponent implements OnInit {
   hotel: Hotel = new Hotel();
   uid: any;
   dateTime: any;
+  image: string;
   onImgInpChange(event: Event) {
     var self = this;
     var reader = new FileReader();
     reader.readAsDataURL((event?.target as any)?.files[0]);
     reader.onload = function () {
       var basetext = reader.result != undefined ? reader.result.toString() : '';
-      self.hotel.image = basetext;
+      self.image = basetext;
     };
     reader.onerror = function () {
       console.log('error');
@@ -35,8 +36,10 @@ export class AddHotelPgComponent implements OnInit {
     this.userUid();
   }
   onFormSubmit(form: NgForm) {
-    if (form.valid && this.hotel.image != null) {
+    if (form.valid) {
       this.hotel = form.value;
+      this.hotel.image = this.image;
+      this.hotel.uid = this.uid;
       this.getDate();
       this.addHotel();
       this.toast.success('Your hotel was added!');
@@ -44,10 +47,11 @@ export class AddHotelPgComponent implements OnInit {
     }
   }
   userUid() {
-    var user = this.auth.afAuth.currentUser;
-    user.then((currentUser) => {
-      this.uid = currentUser.uid;
-      console.log(currentUser.uid);
+    this.auth.afAuth.onAuthStateChanged((user) => {
+      if (user) {
+        this.uid = user.uid;
+        console.log(this.uid);
+      }
     });
   }
   addHotel() {

@@ -1,0 +1,13 @@
+<div class="information-wrapper">
+  <h3>Hotel image:</h3>
+  <img [src]="hotel.image" alt="" />
+  <h3>Hotel name: {{ hotel.name }}</h3>
+  <h3>Hotel City {{ hotel.city }}</h3>
+  <h3>Hotel address: {{ hotel.address }}</h3>
+  <h3>Hotel star: {{ hotel.star }}</h3>
+  <h3>Hotel amenities: {{ hotel.amenities }}</h3>
+  <h3>Hotel registered: {{ hotel.date }}</h3>
+  <button (click)="closeDialog()" mat-raised-button color="primary">
+    Close
+  </button>
+</div>

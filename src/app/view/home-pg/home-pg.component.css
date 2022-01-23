@@ -1,0 +1,47 @@
+.hotel-card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 3px 5px rgb(41 47 55 / 10%);
+  margin: 0 0 15px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 70%;
+}
+.hotel-image img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+.rating-icon:first-child {
+  margin-left: -5px;
+}
+.rating-icon {
+  color: #f79b04;
+}
+.hotel-name {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  color: #0f5de4;
+  transition: color 0.16s;
+}
+.hotel-location {
+  margin: 0px;
+  color: #0f5de4;
+  transition: color 0.16s;
+}
+.date-text {
+  margin: 0px;
+  color: #0f5de4;
+}
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5rem;
+}
+.buttons .info-btn {
+  margin-right: 5px;
+}
+.buttons .room-btn {
+  margin-right: 5px;
+}

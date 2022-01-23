@@ -9,11 +9,7 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  constructor(
-    public dialog: MatDialog,
-    public auth: AuthService,
-    private router: Router
-  ) {}
+  constructor(private dialog: MatDialog, public auth: AuthService) {}
 
   openDialog() {
     const dialogRef = this.dialog.open(LoginFormComponent, {

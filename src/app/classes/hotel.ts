@@ -6,4 +6,5 @@ export class Hotel {
   image: string;
   date: number;
   amenities: string;
+  uid: string;
 }

@@ -19,6 +19,7 @@ import { AuthService } from './shared/services/auth.service';
 import { ForgotPwdFormComponent } from './view-helpers/forgot-pwd-form/forgot-pwd-form.component';
 import { BannerComponent } from './shared/header/banner/banner.component';
 import { AddHotelPgComponent } from './view/add-hotel-pg/add-hotel-pg.component';
+import { FullInfoDialogComponent } from './view-helpers/full-info-dialog/full-info-dialog.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { AddHotelPgComponent } from './view/add-hotel-pg/add-hotel-pg.component'
     ForgotPwdFormComponent,
     BannerComponent,
     AddHotelPgComponent,
+    FullInfoDialogComponent,
   ],
   imports: [
     BrowserModule,

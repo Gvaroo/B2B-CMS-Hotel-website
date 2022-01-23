@@ -57,7 +57,7 @@ export class AuthService {
       });
   }
   // Sign up with email/password
-  signUp(email: any, password: any, name: any) {
+  signUp(email: any, password: any, name: string) {
     return this.afAuth
       .createUserWithEmailAndPassword(email, password)
       .then((result) => {
