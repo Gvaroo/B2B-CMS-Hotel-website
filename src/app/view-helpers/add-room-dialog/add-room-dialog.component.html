@@ -1,0 +1,25 @@
+<div class="info-wrapper">
+  <h3>Hotel image:</h3>
+  <img [src]="room.image" alt="" />
+  <h3>Room name: {{ room.name }}</h3>
+  <h3>Room available: {{ room.qauntity }}</h3>
+  <h3>Room child policy: {{ room.childPolicy }}</h3>
+  <h3>Room amenities: {{ room.amenities }}</h3>
+  <div class="info-btns">
+    <button class="dialog-btn" mat-raised-button color="primary">
+      Discounts
+    </button>
+    <button class="dialog-btn" mat-raised-button color="accent">
+      Price policy
+    </button>
+    <button class="dialog-btn" mat-raised-button color="warn">Bookings</button>
+    <button
+      class="close-btn"
+      (click)="closeDialog()"
+      mat-raised-button
+      color="primary"
+    >
+      Close
+    </button>
+  </div>
+</div>

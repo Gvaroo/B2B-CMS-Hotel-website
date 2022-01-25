@@ -20,6 +20,9 @@ import { ForgotPwdFormComponent } from './view-helpers/forgot-pwd-form/forgot-pw
 import { BannerComponent } from './shared/header/banner/banner.component';
 import { AddHotelPgComponent } from './view/add-hotel-pg/add-hotel-pg.component';
 import { FullInfoDialogComponent } from './view-helpers/full-info-dialog/full-info-dialog.component';
+import { ShowRoomsPgComponent } from './view/show-rooms-pg/show-rooms-pg.component';
+import { AddRoomPgComponent } from './view/show-rooms-pg/add-room-pg/add-room-pg.component';
+import { AddRoomDialogComponent } from './view-helpers/add-room-dialog/add-room-dialog.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,9 @@ import { FullInfoDialogComponent } from './view-helpers/full-info-dialog/full-in
     BannerComponent,
     AddHotelPgComponent,
     FullInfoDialogComponent,
+    ShowRoomsPgComponent,
+    AddRoomPgComponent,
+    AddRoomDialogComponent,
   ],
   imports: [
     BrowserModule,

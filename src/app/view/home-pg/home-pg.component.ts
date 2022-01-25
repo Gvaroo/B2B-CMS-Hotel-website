@@ -11,7 +11,9 @@ import { FullInfoDialogComponent } from 'src/app/view-helpers/full-info-dialog/f
 })
 export class HomePgComponent implements OnInit {
   items: Observable<any>;
+
   hotels: any[] = [];
+  adminId: string = 'cM3qwi1JGkR2hBwuO0TKKHXCtJj1';
   uid: any;
   constructor(public auth: AuthService, private dialog: MatDialog) {}
   ngOnInit(): void {
@@ -37,10 +39,12 @@ export class HomePgComponent implements OnInit {
   }
   openDialog(name: string, uid: any) {
     const dialogRef = this.dialog.open(FullInfoDialogComponent, {
+      height: '100%',
       data: {
         name: name,
         id: uid,
       },
     });
   }
+  
 }

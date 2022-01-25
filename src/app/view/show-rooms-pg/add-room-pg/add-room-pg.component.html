@@ -2,7 +2,7 @@
   <div class="box">
     <h1 class="hotel-text">Add hotel</h1>
     <form (ngSubmit)="onFormSubmit(form)" #form="ngForm">
-      <h3>Hotel name</h3>
+      <h3>Room name</h3>
       <mat-form-field appearance="outline">
         <input
           name="name"
@@ -13,60 +13,36 @@
           required
         />
       </mat-form-field>
-      <h3>Hotel city</h3>
+      <h3>Room quantity</h3>
       <mat-form-field appearance="outline">
         <input
-          name="city"
+          name="qauntity"
           ngModel
           matInput
           placeholder="Enter here"
-          type="text"
+          type="number"
           required
         />
       </mat-form-field>
-      <h3>Hotel address</h3>
+      <h3>Room Child Placement Policy</h3>
       <mat-form-field appearance="outline">
-        <input
-          name="address"
-          ngModel
-          matInput
-          placeholder="Enter here"
-          type="text"
-          required
-        />
+        <mat-label>Enter here</mat-label>
+        <textarea name="childPolicy" ngModel required matInput></textarea>
       </mat-form-field>
-      <h3>Hotel star</h3>
-      <mat-form-field appearance="outline">
-        <select name="star" ngModel matNativeControl required>
-          <option value="5">5 Stars</option>
-          <option value="4">4 Stars</option>
-          <option value="3">3 Stars</option>
-          <option value="2">2 stars</option>
-          <option value="1">1 stars</option>
-        </select>
-      </mat-form-field>
-      <h3>Payment</h3>
-      <mat-form-field appearance="outline">
-        <select name="payment" ngModel matNativeControl required>
-          <option value="At the hotel">At the hotel</option>
-          <option value="By card">By card</option>
-          <option value="At the hotel or By card">Both</option>
-        </select>
-      </mat-form-field>
-      <h3>The main amenities of the hotel</h3>
+
+      <h3>Room amenities</h3>
       <mat-form-field appearance="outline">
         <mat-label>Enter here</mat-label>
         <textarea name="amenities" ngModel required matInput></textarea>
       </mat-form-field>
 
-      <h3>Hotel images</h3>
+      <h3>Room image</h3>
       <div class="upload-image">
         <input
           style="display: none"
-          (change)="onImagesInpChange($event)"
+          (change)="onImgInpChange($event)"
           type="file"
           #selectFile
-          multiple
           accept=".jpg,.png,.jpeg"
         />
         <button
@@ -76,7 +52,7 @@
           type="button"
           (click)="selectFile.click()"
         >
-          Select Images
+          Select Image
         </button>
       </div>
       <button
@@ -86,7 +62,7 @@
         type="submit"
         [disabled]="form.invalid"
       >
-        Register hotel
+        Register room
       </button>
     </form>
   </div>

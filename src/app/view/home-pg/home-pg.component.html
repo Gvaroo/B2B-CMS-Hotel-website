@@ -5,33 +5,43 @@
       <div class="hotel-wrapper">
         <div class="hotel-card" *ngFor="let item of hotels">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-lg-6 col-md-6">
               <div class="hotel-image">
-                <img [src]="item.image" alt="" />
+                <img [src]="item.images[0]" alt="" />
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="hotel-content">
-                <a href=""
-                  ><h2 class="hotel-name">{{ item.name }}</h2></a
-                >
-                <h3 class="hotel-location">{{ item.city }}</h3>
-                <h4 class="date-text">Date added: {{ item.date }}</h4>
-                <h4 class="date-text">Stars: {{ item.star }}</h4>
-              </div>
-              <div class="buttons">
-                <button
-                  *ngIf="uid == item.uid && auth.userData as user"
-                  class="info-btn"
-                  mat-raised-button
-                  color="primary"
-                  (click)="openDialog(item.name, item.uid)"
-                >
-                  Full information
-                </button>
-                <button class="room-btn" mat-raised-button color="primary">
-                  Show rooms
-                </button>
+            <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+              <div class="hotel-wrapper">
+                <div class="hotel-content">
+                  <a href=""
+                    ><h2 class="hotel-name">{{ item.name }}</h2></a
+                  >
+                  <h3 class="hotel-location">{{ item.city }}</h3>
+                  <h4 class="date-text">Date added: {{ item.date }}</h4>
+                  <h4 class="date-text">Stars: {{ item.star }}</h4>
+                </div>
+                <div class="buttons">
+                  <button
+                    *ngIf="
+                      adminId != item.uid ||
+                      (uid == item.uid && auth.userData) as user
+                    "
+                    class="info-btn"
+                    mat-raised-button
+                    color="primary"
+                    (click)="openDialog(item.name, item.uid)"
+                  >
+                    Full information
+                  </button>
+                  <button
+                    routerLink="/show-rooms/{{ item.name }}/{{ item.uid }}"
+                    class="room-btn"
+                    mat-raised-button
+                    color="primary"
+                  >
+                    Show rooms
+                  </button>
+                </div>
               </div>
             </div>
           </div>

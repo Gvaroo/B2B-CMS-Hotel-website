@@ -3,7 +3,8 @@ export class Hotel {
   city: string;
   address: string;
   star: number;
-  image: string;
+  payment: any;
+  images: string[];
   date: number;
   amenities: string;
   uid: string;

@@ -20,25 +20,29 @@ export class AddHotelPgComponent implements OnInit {
   uid: any;
   dateTime: any;
   image: string;
-  onImgInpChange(event: Event) {
-    var self = this;
-    var reader = new FileReader();
-    reader.readAsDataURL((event?.target as any)?.files[0]);
-    reader.onload = function () {
-      var basetext = reader.result != undefined ? reader.result.toString() : '';
-      self.image = basetext;
-    };
-    reader.onerror = function () {
-      console.log('error');
-    };
+  urls = new Array<string>();
+
+  onImagesInpChange(event) {
+    this.urls = [];
+    let files = event.target.files;
+    if (files) {
+      for (let file of files) {
+        let reader = new FileReader();
+        reader.onload = (e: any) => {
+          this.urls.push(e.target.result);
+        };
+        reader.readAsDataURL(file);
+      }
+    }
   }
+
   ngOnInit(): void {
     this.userUid();
   }
   onFormSubmit(form: NgForm) {
     if (form.valid) {
       this.hotel = form.value;
-      this.hotel.image = this.image;
+      this.hotel.images = this.urls;
       this.hotel.uid = this.uid;
       this.getDate();
       this.addHotel();

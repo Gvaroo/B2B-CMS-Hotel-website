@@ -1,40 +1,40 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Observable } from 'rxjs';
-import { Hotel } from 'src/app/classes/hotel';
+import { Room } from 'src/app/classes/room';
 import { AuthService } from 'src/app/shared/services/auth.service';
 
 @Component({
-  selector: 'app-full-info-dialog',
-  templateUrl: './full-info-dialog.component.html',
-  styleUrls: ['./full-info-dialog.component.css'],
+  selector: 'app-add-room-dialog',
+  templateUrl: './add-room-dialog.component.html',
+  styleUrls: ['./add-room-dialog.component.css'],
 })
-export class FullInfoDialogComponent implements OnInit {
-  items: Observable<any>;
-  hotel: Hotel;
-
+export class AddRoomDialogComponent implements OnInit {
+  item: Observable<any>;
+  room: Room;
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,
-    private dialogRef: MatDialogRef<FullInfoDialogComponent>,
+    private dialogRef: MatDialogRef<AddRoomDialogComponent>,
     private auth: AuthService
   ) {}
 
   ngOnInit(): void {
-    this.getHotel().subscribe((response: any) => {
-      this.hotel = response;
+    this.getRoom().subscribe((response: any) => {
+      this.room = response;
     });
   }
 
-  getHotel() {
-    this.items = this.auth.afs
+  getRoom() {
+    this.item = this.auth.afs
       .collection('users')
       .doc(this.data.id)
       .collection('hotels')
+      .doc(this.data.hotelName)
+      .collection('rooms')
       .doc(this.data.name)
       .valueChanges();
-    return this.items;
+    return this.item;
   }
-
   closeDialog() {
     this.dialogRef.close();
   }

@@ -1,0 +1,19 @@
+.info-wrapper img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.info-wrapper h3 {
+  margin-bottom: 5px;
+  color: #0f5de4;
+}
+.info-wrapper .info-btn {
+  display: flex;
+}
+.info-btns .dialog-btn {
+  margin-right: 5px !important;
+}
+.info-btns .close-btn {
+  float: right;
+}
