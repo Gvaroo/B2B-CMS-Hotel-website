@@ -1,0 +1,14 @@
+h1 {
+  margin: 0px;
+  text-align: center;
+  font-weight: 500;
+  color: #0f5de4;
+  margin-bottom: 20px;
+}
+h3 {
+  margin: 0px;
+}
+.mat-form-field,
+.addBtn {
+  width: 100%;
+}

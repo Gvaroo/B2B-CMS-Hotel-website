@@ -1,0 +1,39 @@
+.discount-wrapper {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 3px 5px rgb(41 47 55 / 10%);
+  height: auto;
+  width: 850px;
+  padding: 12px 20px 12px 12px;
+}
+.discount-wrapper h1 {
+  text-align: center;
+  margin: 0px;
+  font-weight: 500;
+}
+.discount-wrapper .add-btn {
+  width: 100%;
+  border-color: rgb(15 93 228 / 40%) !important;
+  color: #0f5de4;
+  margin-top: 20px;
+}
+.box-content {
+  margin-top: 30px;
+  display: flex;
+  border: 1px solid #e6e4e5;
+  border-radius: 5px;
+}
+.box-content .discount-info {
+  width: 100%;
+}
+.discount-info .discount-text {
+  color: #0f5de4;
+  margin: 0px;
+  font-weight: 400;
+}
+.discount-info .discount-button {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}

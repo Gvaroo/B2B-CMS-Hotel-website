@@ -1,0 +1,34 @@
+<app-banner></app-banner>
+<div class="container">
+  <div class="discount-wrapper">
+    <h1>Hotel discounts</h1>
+    <button
+      *ngIf="checkConditions()"
+      (click)="openDialog()"
+      class="add-btn"
+      mat-stroked-button
+    >
+      Add discount
+    </button>
+    <div *ngFor="let item of discounts" class="box-content">
+      <div class="container">
+        <div class="discount-info">
+          <h2 class="discount-text">{{ item.name }}</h2>
+          <h3 class="discount-text">Start date: {{ item.startDate }}</h3>
+          <h3 class="discount-text">end Date: {{ item.endDate }}</h3>
+          <h3 class="discount-text">Amount: {{ item.amount }} Gel</h3>
+          <div class="discount-button">
+            <button
+              *ngIf="checkConditions()"
+              (click)="deleteDiscountBtn(item.name)"
+              mat-raised-button
+              color="primary"
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

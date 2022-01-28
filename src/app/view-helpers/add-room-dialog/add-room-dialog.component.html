@@ -6,7 +6,12 @@
   <h3>Room child policy: {{ room.childPolicy }}</h3>
   <h3>Room amenities: {{ room.amenities }}</h3>
   <div class="info-btns">
-    <button class="dialog-btn" mat-raised-button color="primary">
+    <button
+      (click)="goToDiscountPg()"
+      class="dialog-btn"
+      mat-raised-button
+      color="primary"
+    >
       Discounts
     </button>
     <button class="dialog-btn" mat-raised-button color="accent">

@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <h1>Discount Registration</h1>
+  <form [formGroup]="discountForm" (ngSubmit)="onFormSubmit()" #form="ngForm">
+    <mat-form-field appearance="outline" floatLabel="always">
+      <mat-label>Discount name</mat-label>
+      <input
+        formControlName="name"
+        matInput
+        required
+        placeholder="Enter here"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="outline" floatLabel="always">
+      <mat-label>Start date</mat-label>
+      <input formControlName="startDate" type="date" matInput required />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" floatLabel="always">
+      <mat-label>End date</mat-label>
+      <input formControlName="endDate" type="date" matInput required />
+    </mat-form-field>
+    <mat-form-field appearance="outline" floatLabel="always">
+      <mat-label>Discount Amount</mat-label>
+      <input
+        formControlName="discountAmount"
+        matInput
+        required
+        type="number"
+        placeholder="Enter here"
+      />
+    </mat-form-field>
+    <button
+      class="addBtn"
+      [disabled]="form.invalid"
+      mat-raised-button
+      color="primary"
+    >
+      Add discount
+    </button>
+  </form>
+</div>

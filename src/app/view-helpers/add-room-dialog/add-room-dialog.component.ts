@@ -1,5 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Room } from 'src/app/classes/room';
 import { AuthService } from 'src/app/shared/services/auth.service';
@@ -15,7 +16,8 @@ export class AddRoomDialogComponent implements OnInit {
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,
     private dialogRef: MatDialogRef<AddRoomDialogComponent>,
-    private auth: AuthService
+    private auth: AuthService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -34,6 +36,10 @@ export class AddRoomDialogComponent implements OnInit {
       .doc(this.data.name)
       .valueChanges();
     return this.item;
+  }
+  goToDiscountPg() {
+    this.router.navigate(['/discounts/', this.data.hotelName, this.data.id]);
+    this.dialogRef.close();
   }
   closeDialog() {
     this.dialogRef.close();

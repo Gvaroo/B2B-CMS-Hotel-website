@@ -23,6 +23,8 @@ import { FullInfoDialogComponent } from './view-helpers/full-info-dialog/full-in
 import { ShowRoomsPgComponent } from './view/show-rooms-pg/show-rooms-pg.component';
 import { AddRoomPgComponent } from './view/show-rooms-pg/add-room-pg/add-room-pg.component';
 import { AddRoomDialogComponent } from './view-helpers/add-room-dialog/add-room-dialog.component';
+import { DiscountPgComponent } from './view/discount-pg/discount-pg.component';
+import { DiscountRegistrationDialogComponent } from './view-helpers/discount-registration-dialog/discount-registration-dialog.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { AddRoomDialogComponent } from './view-helpers/add-room-dialog/add-room-
     ShowRoomsPgComponent,
     AddRoomPgComponent,
     AddRoomDialogComponent,
+    DiscountPgComponent,
+    DiscountRegistrationDialogComponent,
   ],
   imports: [
     BrowserModule,
