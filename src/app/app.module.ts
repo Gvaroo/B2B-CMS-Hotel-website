@@ -25,6 +25,9 @@ import { AddRoomPgComponent } from './view/show-rooms-pg/add-room-pg/add-room-pg
 import { AddRoomDialogComponent } from './view-helpers/add-room-dialog/add-room-dialog.component';
 import { DiscountPgComponent } from './view/discount-pg/discount-pg.component';
 import { DiscountRegistrationDialogComponent } from './view-helpers/discount-registration-dialog/discount-registration-dialog.component';
+import { PricePolicyPgComponent } from './view/price-policy-pg/price-policy-pg.component';
+import { AddPriceDialogComponent } from './view-helpers/add-price-dialog/add-price-dialog.component';
+import { EditRoomPriceDialogComponent } from './view-helpers/edit-room-price-dialog/edit-room-price-dialog.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +46,9 @@ import { DiscountRegistrationDialogComponent } from './view-helpers/discount-reg
     AddRoomDialogComponent,
     DiscountPgComponent,
     DiscountRegistrationDialogComponent,
+    PricePolicyPgComponent,
+    AddPriceDialogComponent,
+    EditRoomPriceDialogComponent,
   ],
   imports: [
     BrowserModule,

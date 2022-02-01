@@ -10,6 +10,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   exports: [
@@ -24,6 +27,9 @@ import { MatListModule } from '@angular/material/list';
     MatDialogModule,
     MatCardModule,
     MatListModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
   ],
 })
 export class MaterialUiModule {}

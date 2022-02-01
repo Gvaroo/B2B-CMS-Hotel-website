@@ -14,7 +14,12 @@
     >
       Discounts
     </button>
-    <button class="dialog-btn" mat-raised-button color="accent">
+    <button
+      (click)="goToPricePolicyPg(room.name)"
+      class="dialog-btn"
+      mat-raised-button
+      color="accent"
+    >
       Price policy
     </button>
     <button class="dialog-btn" mat-raised-button color="warn">Bookings</button>

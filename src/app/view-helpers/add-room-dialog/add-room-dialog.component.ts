@@ -41,6 +41,15 @@ export class AddRoomDialogComponent implements OnInit {
     this.router.navigate(['/discounts/', this.data.hotelName, this.data.id]);
     this.dialogRef.close();
   }
+  goToPricePolicyPg(item: any) {
+    this.router.navigate([
+      '/price-policy/',
+      this.data.hotelName,
+      this.data.id,
+      item,
+    ]);
+    this.dialogRef.close();
+  }
   closeDialog() {
     this.dialogRef.close();
   }

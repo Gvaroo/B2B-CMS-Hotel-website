@@ -1,0 +1,26 @@
+.policy-wrapper {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 3px 5px rgb(41 47 55 / 10%);
+  height: auto;
+  width: 850px;
+  padding: 12px 20px 12px 12px;
+}
+.policy-wrapper h1 {
+  text-align: center;
+  margin: 0px;
+  font-weight: 500;
+}
+.policy-wrapper .add-btn {
+  width: 100%;
+  border-color: rgb(15 93 228 / 40%) !important;
+  color: #0f5de4;
+  margin-top: 20px;
+}
+.policy-wrapper table {
+  width: 100%;
+  margin-top: 30px;
+}
+td.mat-cell:last-of-type {
+  padding-right: 0px !important;
+}
