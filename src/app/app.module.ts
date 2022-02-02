@@ -28,6 +28,7 @@ import { DiscountRegistrationDialogComponent } from './view-helpers/discount-reg
 import { PricePolicyPgComponent } from './view/price-policy-pg/price-policy-pg.component';
 import { AddPriceDialogComponent } from './view-helpers/add-price-dialog/add-price-dialog.component';
 import { EditRoomPriceDialogComponent } from './view-helpers/edit-room-price-dialog/edit-room-price-dialog.component';
+import { BookingPgComponent } from './view/booking-pg/booking-pg.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { EditRoomPriceDialogComponent } from './view-helpers/edit-room-price-dia
     PricePolicyPgComponent,
     AddPriceDialogComponent,
     EditRoomPriceDialogComponent,
+    BookingPgComponent,
   ],
   imports: [
     BrowserModule,

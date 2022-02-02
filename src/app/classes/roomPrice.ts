@@ -3,4 +3,5 @@ export class RoomPrice {
   startDate: number;
   endDate: number;
   price: number;
+  booked: boolean;
 }

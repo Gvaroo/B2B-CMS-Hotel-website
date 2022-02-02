@@ -40,7 +40,6 @@ export class PricePolicyPgComponent implements OnInit {
     this.userUid();
     this.getPrices().subscribe((item: any) => {
       this.pricesList = item;
-      console.log(this.pricesList);
     });
   }
   getParams() {
@@ -48,7 +47,6 @@ export class PricePolicyPgComponent implements OnInit {
       this.hotelName = item.name;
       this.hotelId = item.id;
       this.roomName = item.roomName;
-      console.log(this.hotelId, this.hotelName, this.roomName);
     });
   }
   openDialog() {

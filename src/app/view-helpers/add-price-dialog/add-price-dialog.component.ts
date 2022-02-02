@@ -13,7 +13,7 @@ import { AuthService } from 'src/app/shared/services/auth.service';
 export class AddPriceDialogComponent implements OnInit {
   priceForm: FormGroup;
   roomPrice: RoomPrice = new RoomPrice();
-
+  booked: boolean = false;
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,
     private auth: AuthService,
@@ -34,6 +34,7 @@ export class AddPriceDialogComponent implements OnInit {
   }
   onFormSubmit() {
     this.roomPrice = this.priceForm.value;
+    this.roomPrice.booked = this.booked;
     this.addPrice();
     this.toast.success('Your price was added!');
     this.dialogRef.close();

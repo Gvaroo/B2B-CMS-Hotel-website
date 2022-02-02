@@ -1,0 +1,29 @@
+.booking-wrapper {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 3px 5px rgb(41 47 55 / 10%);
+  height: auto;
+  width: 850px;
+  padding: 12px 20px 12px 12px;
+}
+.booking-wrapper h1 {
+  text-align: center;
+  margin: 0px;
+  font-weight: 500;
+}
+.booking-wrapper table {
+  width: 100%;
+  margin-top: 30px;
+}
+.green {
+  background-color: green;
+}
+.red {
+  background-color: red;
+}
+.td.mat-cell:last-of-type {
+  padding-right: 0px !important;
+}
+.bookBtn {
+  width: 100%;
+}

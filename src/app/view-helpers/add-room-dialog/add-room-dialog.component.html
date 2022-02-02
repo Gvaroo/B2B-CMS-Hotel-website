@@ -22,7 +22,14 @@
     >
       Price policy
     </button>
-    <button class="dialog-btn" mat-raised-button color="warn">Bookings</button>
+    <button
+      (click)="goToBookingPg(room.name)"
+      class="dialog-btn"
+      mat-raised-button
+      color="warn"
+    >
+      Bookings
+    </button>
     <button
       class="close-btn"
       (click)="closeDialog()"

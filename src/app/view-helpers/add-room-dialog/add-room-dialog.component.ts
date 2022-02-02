@@ -50,6 +50,15 @@ export class AddRoomDialogComponent implements OnInit {
     ]);
     this.dialogRef.close();
   }
+  goToBookingPg(item: any) {
+    this.router.navigate([
+      '/booking/',
+      this.data.hotelName,
+      this.data.id,
+      item,
+    ]);
+    this.dialogRef.close();
+  }
   closeDialog() {
     this.dialogRef.close();
   }

@@ -1,0 +1,89 @@
+<app-banner></app-banner>
+<div class="container">
+  <div class="booking-wrapper">
+    <h1>Room Booking</h1>
+
+    <table mat-table [dataSource]="pricesList" class="mat-elevation-z8">
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td
+          [ngClass]="{
+            green: element.booked == false,
+            red: element.booked == true
+          }"
+          mat-cell
+          *matCellDef="let element"
+        >
+          {{ element.name }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="startDate">
+        <th mat-header-cell *matHeaderCellDef>StartDate</th>
+        <td
+          [ngClass]="{
+            green: element.booked == false,
+            red: element.booked == true
+          }"
+          mat-cell
+          *matCellDef="let element"
+        >
+          {{ element.startDate }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="endDate">
+        <th mat-header-cell *matHeaderCellDef>endDate</th>
+        <td
+          [ngClass]="{
+            green: element.booked == false,
+            red: element.booked == true
+          }"
+          mat-cell
+          *matCellDef="let element"
+        >
+          {{ element.endDate }}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef>Price</th>
+        <td
+          [ngClass]="{
+            green: element.booked == false,
+            red: element.booked == true
+          }"
+          mat-cell
+          *matCellDef="let element"
+        >
+          {{ element.roomPrice }} Gel
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="book">
+        <th mat-header-cell *matHeaderCellDef>Book</th>
+        <td mat-cell *matCellDef="let element">
+          <ng-container *ngIf="element.booked == false; else booked">
+            <button
+              (click)="onBookBtnClick(element.name)"
+              class="bookBtn"
+              mat-raised-button
+            >
+              Book
+            </button>
+          </ng-container>
+          <ng-template #booked>
+            <button
+              [disabled]="element.booked == true"
+              class="bookBtn"
+              mat-raised-button
+            >
+              Booked
+            </button>
+          </ng-template>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+</div>

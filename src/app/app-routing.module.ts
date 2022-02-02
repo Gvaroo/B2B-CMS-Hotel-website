@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddHotelPgComponent } from './view/add-hotel-pg/add-hotel-pg.component';
+import { BookingPgComponent } from './view/booking-pg/booking-pg.component';
 import { DiscountPgComponent } from './view/discount-pg/discount-pg.component';
 import { HomePgComponent } from './view/home-pg/home-pg.component';
 import { PricePolicyPgComponent } from './view/price-policy-pg/price-policy-pg.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
     path: 'price-policy/:name/:id/:roomName',
     component: PricePolicyPgComponent,
   },
+  { path: 'booking/:name/:id/:roomName', component: BookingPgComponent },
 ];
 
 @NgModule({
