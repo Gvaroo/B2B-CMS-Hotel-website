@@ -1,0 +1,19 @@
+@media (max-width: 1200px) {
+  .hotel-card {
+    width: auto !important;
+  }
+}
+@media (max-width: 767px) {
+  .hotel-wrapper .hotel-content {
+    margin-left: 10px;
+  }
+  .hotel-wrapper .buttons {
+    margin-top: 0px !important;
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 580px) {
+  .container {
+    width: 95% !important;
+  }
+}

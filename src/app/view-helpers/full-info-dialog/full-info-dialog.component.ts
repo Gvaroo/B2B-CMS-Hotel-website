@@ -7,7 +7,10 @@ import { AuthService } from 'src/app/shared/services/auth.service';
 @Component({
   selector: 'app-full-info-dialog',
   templateUrl: './full-info-dialog.component.html',
-  styleUrls: ['./full-info-dialog.component.css'],
+  styleUrls: [
+    './full-info-dialog.component.css',
+    './full-info-responsive.component.css',
+  ],
 })
 export class FullInfoDialogComponent implements OnInit {
   items: Observable<any>;

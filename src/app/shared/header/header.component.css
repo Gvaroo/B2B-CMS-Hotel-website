@@ -1,13 +1,17 @@
 .mat-toolbar .mat-primary {
   background: white !important;
 }
-.example-spacer {
+.mat-toolbar .example-spacer {
   flex: 1 1 auto;
 }
-.logo {
+.mat-toolbar span {
+  cursor: pointer;
+}
+.mat-toolbar .logo {
   width: 4rem;
   height: auto;
   margin-right: 10px;
   margin-bottom: 9px;
   align-items: center;
+  cursor: pointer;
 }

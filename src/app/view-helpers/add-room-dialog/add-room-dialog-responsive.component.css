@@ -1,0 +1,16 @@
+@media (max-width: 525px) {
+  .info-wrapper .info-btns {
+    flex-wrap: wrap;
+    display: flex;
+  }
+  .info-btns button:first-child {
+    margin-top: 0px;
+  }
+  .info-btns button {
+    width: 100% !important;
+    margin-top: 7px;
+  }
+  .info-btns button:last-child {
+    margin-right: 5px !important;
+  }
+}

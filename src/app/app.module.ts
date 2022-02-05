@@ -13,6 +13,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { LoginFormComponent } from './view-helpers/login-form/login-form.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HotToastModule } from '@ngneat/hot-toast';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { RegistrationPgComponent } from './view/registration-pg/registration-pg.component';
 import { HomePgComponent } from './view/home-pg/home-pg.component';
 import { AuthService } from './shared/services/auth.service';
@@ -29,6 +30,7 @@ import { PricePolicyPgComponent } from './view/price-policy-pg/price-policy-pg.c
 import { AddPriceDialogComponent } from './view-helpers/add-price-dialog/add-price-dialog.component';
 import { EditRoomPriceDialogComponent } from './view-helpers/edit-room-price-dialog/edit-room-price-dialog.component';
 import { BookingPgComponent } from './view/booking-pg/booking-pg.component';
+import { ResponsiveHeaderDialogComponent } from './shared/header/responsive-header-dialog/responsive-header-dialog.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,7 @@ import { BookingPgComponent } from './view/booking-pg/booking-pg.component';
     AddPriceDialogComponent,
     EditRoomPriceDialogComponent,
     BookingPgComponent,
+    ResponsiveHeaderDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,6 +62,7 @@ import { BookingPgComponent } from './view/booking-pg/booking-pg.component';
     FormsModule,
     ReactiveFormsModule,
     MaterialUiModule,
+    FlexLayoutModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,

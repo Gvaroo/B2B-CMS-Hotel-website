@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "bootstrap/dist/css/bootstrap-grid.min.css";
+
 html,
 body {
   height: 100%;
@@ -30,11 +31,84 @@ a:active {
 
 .header-dialog .mat-dialog-container {
   width: 300px;
+  margin-bottom: 17rem;
+}
+.forgot-pwd-dialog .mat-dialog-container {
+  width: 300px;
   margin-bottom: 18rem;
 }
 
-/* @media (max-width: 1200px) {
+/* Global dialog responsive */
+
+.header-responsive-dialog {
+  margin-top: 56.4px !important;
+}
+.header-responsive-dialog .mat-dialog-container {
+  background: #3f51b5 !important;
+}
+
+.backdropBackground {
+  opacity: 0 !important;
+}
+.login-responsive-dialog {
+  width: 100%;
+}
+
+@media (min-width: 1500px) and (max-width: 1700px) {
   .header-dialog .mat-dialog-container {
-  
+    margin-bottom: 25rem;
   }
-} */
+}
+@media (min-width: 1920px) {
+  .header-dialog .mat-dialog-container {
+    margin-bottom: 36rem;
+  }
+}
+@media (max-width: 660px) {
+  .fullInformationDialog {
+    height: auto !important;
+  }
+}
+@media (max-width: 655px) {
+  .container {
+    width: 100%;
+  }
+  .box {
+    width: auto !important;
+  }
+}
+@media (max-width: 599px) {
+  .forgot-pwd-dialog .mat-dialog-container {
+    margin-bottom: 19rem !important;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+}
+@media (max-width: 525px) {
+  .addRoomDailogResponsive {
+    max-width: 95% !important;
+    height: 100% !important;
+  }
+}
+@media (max-width: 470px) {
+  .header-dialog,
+  .forgot-pwd-dialog {
+    max-width: 100% !important;
+  }
+  .header-dialog .mat-dialog-container,
+  .forgot-pwd-dialog .mat-dialog-container {
+    width: 100% !important;
+  }
+  .forgot-pwd-dialog .mat-dialog-container {
+    margin-bottom: 20rem !important;
+  }
+}
+@media (max-width: 422px) {
+  .fullInformationDialog {
+    max-width: 100% !important;
+  }
+}

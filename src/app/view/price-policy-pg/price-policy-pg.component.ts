@@ -10,7 +10,10 @@ import { EditRoomPriceDialogComponent } from 'src/app/view-helpers/edit-room-pri
 @Component({
   selector: 'app-price-policy-pg',
   templateUrl: './price-policy-pg.component.html',
-  styleUrls: ['./price-policy-pg.component.css'],
+  styleUrls: [
+    './price-policy-pg.component.css',
+    './price-policy-pg-responsive.component.css',
+  ],
 })
 export class PricePolicyPgComponent implements OnInit {
   item: Observable<any>;

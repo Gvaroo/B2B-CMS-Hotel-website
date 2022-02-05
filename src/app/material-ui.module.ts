@@ -11,8 +11,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSortModule } from '@angular/material/sort';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   exports: [
@@ -28,8 +27,7 @@ import { MatSortModule } from '@angular/material/sort';
     MatCardModule,
     MatListModule,
     MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
+    MatSidenavModule,
   ],
 })
 export class MaterialUiModule {}

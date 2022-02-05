@@ -4,8 +4,8 @@
     <article class="hotels">
       <div class="hotel-wrapper">
         <div class="hotel-card" *ngFor="let item of hotels">
-          <div class="row">
-            <div class="col-lg-6 col-md-6">
+          <div class="row gx-0 gx-md-3 gx-lg-3">
+            <div class="col-lg-6 col-md-6 col-sm-12">
               <div class="hotel-image">
                 <img [src]="item.images[0]" alt="" />
               </div>
@@ -22,10 +22,7 @@
                 </div>
                 <div class="buttons">
                   <button
-                    *ngIf="
-                      adminId != item.uid ||
-                      (uid == item.uid && auth.userData) as user
-                    "
+                    *ngIf="checkCondition(item.uid)"
                     class="info-btn"
                     mat-raised-button
                     color="primary"

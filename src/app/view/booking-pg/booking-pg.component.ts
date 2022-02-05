@@ -7,7 +7,10 @@ import { AuthService } from 'src/app/shared/services/auth.service';
 @Component({
   selector: 'app-booking-pg',
   templateUrl: './booking-pg.component.html',
-  styleUrls: ['./booking-pg.component.css'],
+  styleUrls: [
+    './booking-pg.component.css',
+    './booking-pg-responsive.component.css',
+  ],
 })
 export class BookingPgComponent implements OnInit {
   displayedColumns: string[] = [

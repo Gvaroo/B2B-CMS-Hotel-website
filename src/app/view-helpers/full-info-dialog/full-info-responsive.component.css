@@ -1,0 +1,5 @@
+@media (max-width: 767px) {
+  .information-wrapper img {
+    height: auto !important;
+  }
+}

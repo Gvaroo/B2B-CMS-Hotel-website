@@ -1,17 +1,34 @@
 <header>
   <mat-toolbar color="primary">
-    <img class="logo" src="assets/logo.png" alt="" />
-    <span>TravelMore</span>
-    <button routerLink="/" mat-button>Home</button>
-    <button routerLink="/" mat-button>Privacy Policy</button>
-    <button *ngIf="auth.userData as user" routerLink="/add-hotel" mat-button>
+    <img (click)="goToMainPg()" class="logo" src="assets/logo.png" alt="" />
+    <span (click)="goToMainPg()">TravelMore</span>
+    <button fxHide.lt-sm="true" routerLink="/" mat-button>Home</button>
+
+    <button fxHide.lt-sm="true" routerLink="/" mat-button>
+      Privacy Policy
+    </button>
+    <button
+      fxHide.lt-sm="true"
+      *ngIf="auth.userData as user"
+      routerLink="/add-hotel"
+      mat-button
+    >
       Add hotel
     </button>
     <span class="example-spacer"></span>
+    <mat-icon (click)="openResponsiveDialog()" fxHide fxShow.lt-sm="true"
+      >menu</mat-icon
+    >
+
     <ng-container *ngIf="auth.userData as user; else loginForm">
       <div class="login-module">
         <a href="/">
-          <button (click)="logOut()" class="menu-button" mat-button>
+          <button
+            fxHide.lt-sm="true"
+            (click)="logOut()"
+            class="menu-button"
+            mat-button
+          >
             <mat-icon>logout</mat-icon>
             Logout
           </button></a
@@ -23,7 +40,12 @@
 
 <ng-template #loginForm>
   <div class="login-module">
-    <button (click)="openDialog()" class="menu-button" mat-button>
+    <button
+      fxHide.lt-sm="true"
+      (click)="openDialog()"
+      class="menu-button"
+      mat-button
+    >
       <mat-icon>login</mat-icon>
       Log in
     </button>

@@ -10,7 +10,10 @@ import { DiscountRegistrationDialogComponent } from 'src/app/view-helpers/discou
 @Component({
   selector: 'app-discount-pg',
   templateUrl: './discount-pg.component.html',
-  styleUrls: ['./discount-pg.component.css'],
+  styleUrls: [
+    './discount-pg.component.css',
+    './discount-pg-responsive.component.css',
+  ],
 })
 export class DiscountPgComponent implements OnInit {
   item: Observable<any>;
@@ -23,7 +26,7 @@ export class DiscountPgComponent implements OnInit {
   hotelId: any;
   userId: any;
   hotelName: any;
-  discounts: Discount[] = [];
+  discounts: any[] = [];
 
   ngOnInit(): void {
     this.getParams();

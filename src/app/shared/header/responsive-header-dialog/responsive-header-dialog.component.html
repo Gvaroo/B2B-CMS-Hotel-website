@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <div class="header-wrapper">
+    <button (click)="goToHomePg()" class="menu-button" mat-button>Home</button>
+    <button routerLink="/" class="menu-button" mat-button>
+      Privacy Policy
+    </button>
+    <button
+      class="menu-button"
+      *ngIf="auth.userData as user"
+      routerLink="/add-hotel"
+      mat-button
+    >
+      Add hotel
+    </button>
+    <ng-container *ngIf="auth.userData as user; else loginForm">
+      <div class="login-module">
+        <a href="/">
+          <button (click)="logOut()" class="menu-button" mat-button>
+            Logout
+          </button></a
+        >
+      </div>
+    </ng-container>
+  </div>
+
+  <ng-template #loginForm>
+    <div class="login-module">
+      <button (click)="openDialog()" class="menu-button" mat-button>
+        Log in
+      </button>
+    </div>
+  </ng-template>
+</div>

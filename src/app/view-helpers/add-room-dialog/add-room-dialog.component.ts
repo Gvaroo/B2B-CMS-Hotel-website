@@ -8,7 +8,10 @@ import { AuthService } from 'src/app/shared/services/auth.service';
 @Component({
   selector: 'app-add-room-dialog',
   templateUrl: './add-room-dialog.component.html',
-  styleUrls: ['./add-room-dialog.component.css'],
+  styleUrls: [
+    './add-room-dialog.component.css',
+    './add-room-dialog-responsive.component.css',
+  ],
 })
 export class AddRoomDialogComponent implements OnInit {
   item: Observable<any>;

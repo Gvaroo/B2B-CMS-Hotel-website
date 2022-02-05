@@ -16,7 +16,7 @@
           <h2 class="discount-text">{{ item.name }}</h2>
           <h3 class="discount-text">Start date: {{ item.startDate }}</h3>
           <h3 class="discount-text">end Date: {{ item.endDate }}</h3>
-          <h3 class="discount-text">Amount: {{ item.amount }} Gel</h3>
+          <h3 class="discount-text">Amount: {{ item.discountAmount }} Gel</h3>
           <div class="discount-button">
             <button
               *ngIf="checkConditions()"

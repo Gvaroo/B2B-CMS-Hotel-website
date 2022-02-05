@@ -9,7 +9,10 @@ import { AddRoomPgComponent } from './add-room-pg/add-room-pg.component';
 @Component({
   selector: 'app-show-rooms-pg',
   templateUrl: './show-rooms-pg.component.html',
-  styleUrls: ['./show-rooms-pg.component.css'],
+  styleUrls: [
+    './show-rooms-pg.component.css',
+    './show-rooms-responsive-component.css',
+  ],
 })
 export class ShowRoomsPgComponent implements OnInit {
   constructor(
@@ -83,6 +86,7 @@ export class ShowRoomsPgComponent implements OnInit {
         id: this.hotelId,
         hotelName: this.hotelName,
       },
+      panelClass: 'addRoomDailogResponsive',
     });
   }
 }

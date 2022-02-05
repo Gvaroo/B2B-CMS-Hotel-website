@@ -39,7 +39,7 @@ export class LoginFormComponent implements OnInit {
   }
   openDialog() {
     this.dialog.open(ForgotPwdFormComponent, {
-      panelClass: 'header-dialog',
+      panelClass: 'forgot-pwd-dialog',
       position: { right: '0' },
     });
     this.dialogRef.close();

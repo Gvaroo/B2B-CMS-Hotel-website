@@ -1,0 +1,10 @@
+@media (max-width: 1000px) {
+  .container .discount-wrapper {
+    width: auto !important;
+  }
+}
+@media (max-width: 575px) {
+  .container {
+    width: 95% !important;
+  }
+}

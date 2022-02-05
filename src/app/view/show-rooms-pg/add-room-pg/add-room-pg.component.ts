@@ -8,7 +8,10 @@ import { AuthService } from 'src/app/shared/services/auth.service';
 @Component({
   selector: 'app-add-room-pg',
   templateUrl: './add-room-pg.component.html',
-  styleUrls: ['./add-room-pg.component.css'],
+  styleUrls: [
+    './add-room-pg.component.css',
+    './add-room-pg-responsive.component.css',
+  ],
 })
 export class AddRoomPgComponent implements OnInit {
   constructor(

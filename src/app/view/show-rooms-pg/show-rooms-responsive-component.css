@@ -1,0 +1,27 @@
+@media (max-width: 1000px) {
+  .hotel-wrapper,
+  .room-wrapper {
+    width: auto !important;
+    max-width: 100%;
+  }
+  .room-content .container {
+    width: auto !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1000px) {
+  .room-content .container {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    margin: 0px !important;
+  }
+}
+@media (max-width: 575px) {
+  .room-content {
+    border: none;
+  }
+
+  .image-gallery .hotel-image {
+    width: 100%;
+    height: auto;
+  }
+}
