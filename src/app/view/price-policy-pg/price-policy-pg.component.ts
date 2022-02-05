@@ -18,14 +18,7 @@ import { EditRoomPriceDialogComponent } from 'src/app/view-helpers/edit-room-pri
 export class PricePolicyPgComponent implements OnInit {
   item: Observable<any>;
   pricesList: any[] = [];
-  displayedColumns: string[] = [
-    'name',
-    'startDate',
-    'endDate',
-    'price',
-    'edit',
-    'delete',
-  ];
+  displayedColumns: string[] = ['date', 'price', 'edit', 'delete'];
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -89,21 +82,14 @@ export class PricePolicyPgComponent implements OnInit {
 
     return this.item;
   }
-  openEditDialog(
-    name: string,
-    startDate: number,
-    endDate: number,
-    price: number
-  ) {
+  openEditDialog(date: string, price: number) {
     var dialogRef = this.dialog.open(EditRoomPriceDialogComponent, {
       height: 'auto',
       data: {
         id: this.hotelId,
         name: this.hotelName,
         roomName: this.roomName,
-        priceName: name,
-        startDate: startDate,
-        endDate: endDate,
+        date: date,
         price: price,
       },
     });

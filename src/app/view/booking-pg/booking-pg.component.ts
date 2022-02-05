@@ -13,13 +13,7 @@ import { AuthService } from 'src/app/shared/services/auth.service';
   ],
 })
 export class BookingPgComponent implements OnInit {
-  displayedColumns: string[] = [
-    'name',
-    'startDate',
-    'endDate',
-    'price',
-    'book',
-  ];
+  displayedColumns: string[] = ['date', 'price', 'book'];
   item: Observable<any>;
   constructor(
     private activatedRoute: ActivatedRoute,

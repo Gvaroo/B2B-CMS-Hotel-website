@@ -1,7 +1,6 @@
 export class RoomPrice {
   name: string;
-  startDate: number;
-  endDate: number;
+  date: string;
   price: number;
   booked: boolean;
 }

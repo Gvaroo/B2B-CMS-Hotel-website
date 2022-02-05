@@ -26,9 +26,7 @@ export class AddPriceDialogComponent implements OnInit {
   }
   createForm() {
     this.priceForm = new FormGroup({
-      name: new FormControl(null, Validators.required),
-      startDate: new FormControl(null, Validators.required),
-      endDate: new FormControl(null, Validators.required),
+      date: new FormControl(null, Validators.required),
       roomPrice: new FormControl(null, Validators.required),
     });
   }
@@ -48,7 +46,7 @@ export class AddPriceDialogComponent implements OnInit {
       .collection('rooms')
       .doc(this.data.roomName)
       .collection('Prices')
-      .doc(this.roomPrice.name);
+      .doc(this.roomPrice.date);
 
     return userRef.set(this.roomPrice, {
       merge: false,

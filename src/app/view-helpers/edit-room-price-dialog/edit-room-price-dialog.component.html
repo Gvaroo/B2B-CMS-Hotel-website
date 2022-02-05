@@ -2,18 +2,10 @@
   <h1>Edit room price policy</h1>
   <form [formGroup]="editForm" (ngSubmit)="onFormSubmit()" #form="ngForm">
     <mat-form-field appearance="outline" floatLabel="always">
-      <mat-label>Name</mat-label>
-      <input formControlName="name" matInput required />
-    </mat-form-field>
-    <mat-form-field appearance="outline" floatLabel="always">
-      <mat-label>Start date</mat-label>
-      <input formControlName="startDate" type="date" matInput required />
+      <mat-label>How many days</mat-label>
+      <input formControlName="date" matInput required />
     </mat-form-field>
 
-    <mat-form-field appearance="outline" floatLabel="always">
-      <mat-label>End date</mat-label>
-      <input formControlName="endDate" type="date" matInput required />
-    </mat-form-field>
     <mat-form-field appearance="outline" floatLabel="always">
       <mat-label>Room price</mat-label>
       <input

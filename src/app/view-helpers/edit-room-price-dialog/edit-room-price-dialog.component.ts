@@ -25,9 +25,7 @@ export class EditRoomPriceDialogComponent implements OnInit {
   }
   createForm() {
     this.editForm = new FormGroup({
-      name: new FormControl(this.data.priceName, Validators.required),
-      startDate: new FormControl(this.data.startDate, Validators.required),
-      endDate: new FormControl(this.data.endDate, Validators.required),
+      date: new FormControl(this.data.date, Validators.required),
       roomPrice: new FormControl(this.data.price, Validators.required),
     });
   }
@@ -46,7 +44,7 @@ export class EditRoomPriceDialogComponent implements OnInit {
       .collection('rooms')
       .doc(this.data.roomName)
       .collection('Prices')
-      .doc(this.data.priceName);
+      .doc(this.data.date);
 
     return userRef.set(this.editedPrice, {
       merge: true,

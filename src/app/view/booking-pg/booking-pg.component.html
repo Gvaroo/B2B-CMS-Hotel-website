@@ -4,8 +4,8 @@
     <h1>Room Booking</h1>
 
     <table mat-table [dataSource]="pricesList" class="mat-elevation-z8">
-      <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef>Name</th>
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef>Date</th>
         <td
           [ngClass]="{
             green: element.booked == false,
@@ -14,37 +14,10 @@
           mat-cell
           *matCellDef="let element"
         >
-          {{ element.name }}
+          {{ element.date }}
         </td>
       </ng-container>
 
-      <ng-container matColumnDef="startDate">
-        <th mat-header-cell *matHeaderCellDef>StartDate</th>
-        <td
-          [ngClass]="{
-            green: element.booked == false,
-            red: element.booked == true
-          }"
-          mat-cell
-          *matCellDef="let element"
-        >
-          {{ element.startDate }}
-        </td>
-      </ng-container>
-
-      <ng-container matColumnDef="endDate">
-        <th mat-header-cell *matHeaderCellDef>endDate</th>
-        <td
-          [ngClass]="{
-            green: element.booked == false,
-            red: element.booked == true
-          }"
-          mat-cell
-          *matCellDef="let element"
-        >
-          {{ element.endDate }}
-        </td>
-      </ng-container>
       <ng-container matColumnDef="price">
         <th mat-header-cell *matHeaderCellDef>Price</th>
         <td
@@ -63,7 +36,7 @@
         <td mat-cell *matCellDef="let element">
           <ng-container *ngIf="element.booked == false; else booked">
             <button
-              (click)="onBookBtnClick(element.name)"
+              (click)="onBookBtnClick(element.date)"
               class="bookBtn"
               mat-raised-button
             >
