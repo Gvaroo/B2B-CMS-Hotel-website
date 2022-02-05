@@ -31,6 +31,7 @@ import { AddPriceDialogComponent } from './view-helpers/add-price-dialog/add-pri
 import { EditRoomPriceDialogComponent } from './view-helpers/edit-room-price-dialog/edit-room-price-dialog.component';
 import { BookingPgComponent } from './view/booking-pg/booking-pg.component';
 import { ResponsiveHeaderDialogComponent } from './shared/header/responsive-header-dialog/responsive-header-dialog.component';
+import { PrivacyPolicyPgComponent } from './view/privacy-policy-pg/privacy-policy-pg.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { ResponsiveHeaderDialogComponent } from './shared/header/responsive-head
     EditRoomPriceDialogComponent,
     BookingPgComponent,
     ResponsiveHeaderDialogComponent,
+    PrivacyPolicyPgComponent,
   ],
   imports: [
     BrowserModule,

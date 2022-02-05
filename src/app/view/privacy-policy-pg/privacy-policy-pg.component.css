@@ -1,0 +1,9 @@
+.container-fluid {
+  color: #798891;
+  font-weight: 400;
+  width: auto !important;
+}
+.header-text {
+  text-align: center;
+  margin-top: 40px;
+}
