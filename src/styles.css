@@ -59,6 +59,11 @@ a:active {
     margin-bottom: 25rem;
   }
 }
+@media (min-width: 1367px) {
+  .forgot-pwd-dialog .mat-dialog-container {
+    margin-bottom: 36rem;
+  }
+}
 @media (min-width: 1920px) {
   .header-dialog .mat-dialog-container {
     margin-bottom: 36rem;

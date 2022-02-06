@@ -6,7 +6,10 @@ import { AuthService } from 'src/app/shared/services/auth.service';
 @Component({
   selector: 'app-registration-pg',
   templateUrl: './registration-pg.component.html',
-  styleUrls: ['./registration-pg.component.css'],
+  styleUrls: [
+    './registration-pg.component.css',
+    './registration-pg-responsive.component.css',
+  ],
 })
 export class RegistrationPgComponent implements OnInit {
   constructor(private auth: AuthService, private router: Router) {}

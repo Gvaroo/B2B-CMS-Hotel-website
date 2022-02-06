@@ -1,0 +1,11 @@
+@media (max-width: 767px) {
+  .footer-social {
+    margin-top: 0px;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 451px) {
+  .footer-about ul {
+    display: block;
+  }
+}

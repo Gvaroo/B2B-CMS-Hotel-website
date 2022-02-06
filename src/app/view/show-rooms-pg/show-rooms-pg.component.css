@@ -34,6 +34,7 @@ img {
   width: 100%;
   border-color: rgb(15 93 228 / 40%) !important;
   color: #0f5de4;
+  margin-bottom: 20px;
 }
 .room-content {
   display: flex;
@@ -43,7 +44,7 @@ img {
 }
 .room-contents {
   display: flex;
-  margin-top: 30px;
+  margin-top: auto;
   border: 1px solid #e6e4e5;
   border-radius: 5px;
 }
