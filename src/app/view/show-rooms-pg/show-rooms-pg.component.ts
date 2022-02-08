@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { AddRoomDialogComponent } from 'src/app/view-helpers/add-room-dialog/add-room-dialog.component';
+import { ImageGalleryDialogComponent } from 'src/app/view-helpers/image-gallery-dialog/image-gallery-dialog.component';
 import { AddRoomPgComponent } from './add-room-pg/add-room-pg.component';
 
 @Component({
@@ -87,6 +88,19 @@ export class ShowRoomsPgComponent implements OnInit {
         hotelName: this.hotelName,
       },
       panelClass: 'addRoomDailogResponsive',
+    });
+  }
+  openImageGalleryDialog(item: string) {
+    const dialogRef = this.dialog.open(ImageGalleryDialogComponent, {
+      height: '100%',
+      width: '100%',
+      maxWidth: '100%',
+      data: {
+        defaultImage: item,
+        id: this.hotelId,
+        hotelName: this.hotelName,
+      },
+      panelClass: 'roomGalleryDailog',
     });
   }
 }

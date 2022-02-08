@@ -42,11 +42,15 @@ img {
   border: 1px solid #e6e4e5;
   border-radius: 5px;
 }
+.room-contents:first-child {
+  margin-top: 0px;
+}
 .room-contents {
   display: flex;
   margin-top: auto;
   border: 1px solid #e6e4e5;
   border-radius: 5px;
+  margin-top: 15px;
 }
 
 .room-info {

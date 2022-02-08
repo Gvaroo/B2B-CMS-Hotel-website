@@ -1,0 +1,13 @@
+<div class="gallery-container">
+  <div class="image-gallery-wrapper">
+    <img [src]="images[defaultImageId]" alt="" />
+    <div class="close-arrow">
+      <mat-icon class="close-icon" (click)="closeDialog()">close</mat-icon>
+    </div>
+    <div class="image-controls">
+      <mat-icon (click)="navigateBefore()">navigate_before</mat-icon>
+      <div class="image-counter">{{ defaultImageId + 1 }}/{{ maxLength }}</div>
+      <mat-icon (click)="navigateNext()">navigate_next</mat-icon>
+    </div>
+  </div>
+</div>

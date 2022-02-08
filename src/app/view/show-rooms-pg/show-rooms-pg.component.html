@@ -13,7 +13,12 @@
               *ngFor="let item of hotel.images"
               class="col-lg-3 col-md-4 col-sm-6 gallery-container"
             >
-              <img class="hotel-image" [src]="item" alt="" />
+              <img
+                (click)="openImageGalleryDialog(item)"
+                class="hotel-image"
+                [src]="item"
+                alt=""
+              />
             </div>
           </div>
         </div>

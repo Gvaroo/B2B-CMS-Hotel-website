@@ -38,6 +38,15 @@ a:active {
   margin-bottom: 18rem;
 }
 
+.roomGalleryDailog .mat-dialog-container {
+  /* background: black; */
+  background-color: #2f353c;
+  background-image: url(//st.worldota.net/master/4e1f76e-70f3be8/img/gallery/photo-background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* Global dialog responsive */
 
 .header-responsive-dialog {
