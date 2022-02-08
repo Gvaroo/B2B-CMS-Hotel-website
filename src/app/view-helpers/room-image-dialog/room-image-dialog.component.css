@@ -1,0 +1,33 @@
+.gallery-container {
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+
+  height: 100%;
+}
+.image-gallery-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+.image-gallery-wrapper img {
+  width: auto;
+  max-width: 100%;
+  object-fit: cover;
+  height: auto;
+}
+.close-arrow {
+  height: 28px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 28px;
+  z-index: 3;
+}
+.close-arrow .close-icon {
+  color: #fff;
+  font-size: 35px;
+  cursor: pointer;
+}

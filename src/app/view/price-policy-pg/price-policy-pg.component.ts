@@ -106,7 +106,7 @@ export class PricePolicyPgComponent implements OnInit {
       .doc(item)
       .delete()
       .then(() => {
-        this.toast.success('Your discount was deleted!');
+        this.toast.success('Your price was deleted!');
       })
       .catch((error) => {
         this.toast.error(error);

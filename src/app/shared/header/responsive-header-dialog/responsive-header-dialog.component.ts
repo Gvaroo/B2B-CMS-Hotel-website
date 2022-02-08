@@ -32,4 +32,12 @@ export class ResponsiveHeaderDialogComponent implements OnInit {
     this.router.navigate(['/']);
     this.dialog.closeAll();
   }
+  goToAddHotelPg() {
+    this.router.navigate(['/add-hotel']);
+    this.dialog.closeAll();
+  }
+  goToPrivacyPg() {
+    this.router.navigate(['/privacy-policy']);
+    this.dialog.closeAll();
+  }
 }

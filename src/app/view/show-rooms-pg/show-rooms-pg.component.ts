@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { AddRoomDialogComponent } from 'src/app/view-helpers/add-room-dialog/add-room-dialog.component';
 import { ImageGalleryDialogComponent } from 'src/app/view-helpers/image-gallery-dialog/image-gallery-dialog.component';
+import { RoomImageDialogComponent } from 'src/app/view-helpers/room-image-dialog/room-image-dialog.component';
 import { AddRoomPgComponent } from './add-room-pg/add-room-pg.component';
 
 @Component({
@@ -36,7 +37,6 @@ export class ShowRoomsPgComponent implements OnInit {
     });
     this.getRooms().subscribe((item: any) => {
       this.rooms = item;
-      console.log(this.rooms);
     });
   }
   getParams() {
@@ -99,6 +99,17 @@ export class ShowRoomsPgComponent implements OnInit {
         defaultImage: item,
         id: this.hotelId,
         hotelName: this.hotelName,
+      },
+      panelClass: 'roomGalleryDailog',
+    });
+  }
+  openRoomImageDialog(item: string) {
+    const dialogRef = this.dialog.open(RoomImageDialogComponent, {
+      height: '100%',
+      width: '100%',
+      maxWidth: '100%',
+      data: {
+        image: item,
       },
       panelClass: 'roomGalleryDailog',
     });

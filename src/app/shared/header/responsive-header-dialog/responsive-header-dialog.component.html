@@ -1,13 +1,13 @@
 <div class="container-fluid">
   <div class="header-wrapper">
     <button (click)="goToHomePg()" class="menu-button" mat-button>Home</button>
-    <button routerLink="/" class="menu-button" mat-button>
+    <button (click)="goToPrivacyPg()" class="menu-button" mat-button>
       Privacy Policy
     </button>
     <button
       class="menu-button"
       *ngIf="auth.userData as user"
-      routerLink="/add-hotel"
+      (click)="goToAddHotelPg()"
       mat-button
     >
       Add hotel

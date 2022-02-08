@@ -35,7 +35,11 @@
       </button>
       <div *ngFor="let item of rooms" class="room-contents">
         <div class="room-image">
-          <img [src]="item.image" alt="" />
+          <img
+            (click)="openRoomImageDialog(item.image)"
+            [src]="item.image"
+            alt=""
+          />
         </div>
         <div class="room-info">
           <h2 class="room-text">{{ item.name }}</h2>
